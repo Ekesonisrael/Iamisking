@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Lamisking Pixie Salon and Spa | Professional Pixie Stylist in Abuja</title>
+  <meta name="description" content="Abuja's specialist in precision pixie cuts and frontal installs. 16 Bangui Street, Wuse 2. Book directly on WhatsApp.">
+  <meta property="og:title" content="Lamisking Pixie Salon and Spa | Abuja">
+  <meta property="og:description" content="Abuja's specialist in precision pixie cuts and frontal installs. Book directly on WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    :root {
+      --bg: #120A0E;
+      --bg-tile: #170C13;
+      --text: #F6EEE6;
+      --text-muted: #B8A89C;
+      --gold: #D4AF5A;
+      --gold-hairline: rgba(212, 175, 90, 0.3);
+      --magenta: #C42A78;
+      --magenta-hover: #D83789;
+      --border: rgba(212, 175, 90, 0.22);
+      --card-border: rgba(246, 238, 230, 0.08);
+      --tile-gradient: linear-gradient(165deg, #24141E 0%, #160B12 55%, #0B0408 100%);
+      --serif: 'Playfair Display', serif;
+      --sans: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #FAF6F0;
+        --bg-tile: #EFE6D8;
+        --text: #190F14;
+        --text-muted: #64565F;
+        --gold: #8A6A1F;
+        --gold-hairline: rgba(138, 106, 31, 0.35);
+        --magenta: #B8206E;
+        --magenta-hover: #9E175C;
+        --border: rgba(138, 106, 31, 0.28);
+        --card-border: rgba(25, 15, 20, 0.12);
+        --tile-gradient: linear-gradient(165deg, #EFE6D8 0%, #E3D7C5 60%, #D8CABB 100%);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      color-scheme: dark light;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 96px;
+    }
+
+    @media (min-width: 641px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* 1. STICKY HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .monogram-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: #0B0408;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .wordmark {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 0;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .btn-header-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 16px;
+      background: var(--magenta);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-header-book:hover {
+      background: var(--magenta-hover);
+    }
+
+    /* 2. HERO */
+    .hero {
+      padding-top: 40px;
+      padding-bottom: 48px;
+      animation: heroEntrance 0.5s ease-out;
+    }
+
+    @keyframes heroEntrance {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero {
+        animation: none;
+      }
+    }
+
+    .hero-headline {
+      font-size: clamp(34px, 8.5vw, 54px);
+      letter-spacing: 0;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-line1 {
+      display: block;
+    }
+
+    .hero-line2 {
+      display: block;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-tagline {
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .hero-actions {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      background: var(--magenta);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--magenta-hover);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      background: rgba(212, 175, 90, 0.06);
+    }
+
+    /* 3. PICK YOUR STYLE */
+    .section-styles {
+      padding-top: 40px;
+      padding-bottom: 48px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .section-title {
+      font-size: clamp(28px, 6.5vw, 36px);
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .style-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .view-more-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+
+    .btn-view-more {
+      min-height: 48px;
+      padding: 0 28px;
+    }
+
+    .style-tile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      min-height: 230px;
+      padding: 16px;
+      background: var(--tile-gradient);
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      border: 1px solid var(--gold-hairline);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+
+    .style-tile:hover {
+      border-color: var(--gold);
+    }
+
+    .style-tile-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(18, 10, 14, 0.94) 0%, rgba(18, 10, 14, 0.45) 55%, rgba(18, 10, 14, 0.05) 100%);
+      pointer-events: none;
+    }
+
+    .style-tile-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .style-tile-name {
+      font-size: 19px;
+      color: #F6EEE6;
+      margin-bottom: 6px;
+    }
+
+    .style-tile-action {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+    }
+
+    /* OTHER SERVICES */
+    .services-subheading {
+      font-size: 24px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .services-list {
+      list-style: none;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .service-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .service-name {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .service-ask-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .service-ask-btn:hover {
+      background: rgba(212, 175, 90, 0.08);
+      border-color: var(--gold);
+    }
+
+    /* 4. HOW BOOKING WORKS */
+    .section-booking-steps {
+      padding-top: 40px;
+      padding-bottom: 48px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 18px;
+      background: rgba(246, 238, 230, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #0B0408;
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--text);
+      padding-top: 3px;
+    }
+
+    /* 5. VISIT */
+    .section-visit {
+      padding-top: 40px;
+      padding-bottom: 48px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .visit-card {
+      padding: 24px 20px;
+      background: rgba(246, 238, 230, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+    }
+
+    .salon-address {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 22px;
+    }
+
+    .visit-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 480px) {
+      .visit-actions {
+        flex-direction: row;
+      }
+    }
+
+    .btn-directions {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-directions:hover {
+      border-color: var(--gold);
+      background: rgba(212, 175, 90, 0.06);
+    }
+
+    .instagram-row {
+      padding-top: 16px;
+      border-top: 1px solid var(--card-border);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .instagram-link {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .instagram-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 6. FOOTER */
+    .site-footer {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      border-top: 1px solid var(--card-border);
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* 7. STICKY MOBILE BOTTOM BAR */
+    .mobile-bottom-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      background: var(--bg);
+      border-top: 1px solid var(--card-border);
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (min-width: 641px) {
+      .mobile-bottom-bar {
+        display: none;
+      }
+    }
+
+    .btn-mobile-book {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 48px;
+      background: var(--magenta);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. STICKY HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand-link" aria-label="Lamisking Pixie Salon and Spa home">
+          <div class="monogram-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 4h3v13h7v3H7V4z" fill="#D4AF5A"/>
+            </svg>
+          </div>
+          <span class="wordmark">Lamisking</span>
+        </a>
+        <a id="nav-book-link" class="btn-header-book" href="#">Book</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- 2. HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" class="hero-headline">
+          <span class="hero-line1">Abuja’s specialist in precision pixie cuts</span>
+          <span class="hero-line2">and frontal installs.</span>
+        </h1>
+        <p class="hero-tagline">Short hair. Full confidence.</p>
+        <div class="hero-actions">
+          <a id="hero-whatsapp-btn" class="btn-primary" href="#">Book on WhatsApp</a>
+          <a class="btn-secondary" href="tel:+2349018287564">Call the salon</a>
+        </div>
+      </section>
+
+      <!-- 3. PICK YOUR STYLE -->
+      <section class="section-styles" aria-labelledby="styles-heading">
+        <h2 id="styles-heading" class="section-title">Pick your style</h2>
+
+        <div class="style-grid">
+          <a id="tile-classic" class="style-tile" href="#">
+            <div class="style-tile-overlay"></div>
+            <div class="style-tile-content">
+              <h3 class="style-tile-name">Classic pixie</h3>
+              <span class="style-tile-action">Book on WhatsApp</span>
+            </div>
+          </a>
+
+          <a id="tile-frontal" class="style-tile" href="#">
+            <div class="style-tile-overlay"></div>
+            <div class="style-tile-content">
+              <h3 class="style-tile-name">Frontal pixie</h3>
+              <span class="style-tile-action">Book on WhatsApp</span>
+            </div>
+          </a>
+
+          <a id="tile-cut" class="style-tile" href="#">
+            <div class="style-tile-overlay"></div>
+            <div class="style-tile-content">
+              <h3 class="style-tile-name">Pixie haircut</h3>
+              <span class="style-tile-action">Book on WhatsApp</span>
+            </div>
+          </a>
+
+          <a id="tile-therapy" class="style-tile" href="#">
+            <div class="style-tile-overlay"></div>
+            <div class="style-tile-content">
+              <h3 class="style-tile-name">Hair therapy</h3>
+              <span class="style-tile-action">Book on WhatsApp</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="view-more-wrap">
+          <button type="button" class="btn-secondary btn-view-more">View more</button>
+        </div>
+
+        <h3 class="services-subheading">Other services</h3>
+        <ul class="services-list">
+          <li class="service-row">
+            <span class="service-name">Frontal install and customising</span>
+            <a id="service-ask-frontal" class="service-ask-btn" href="#">Ask for price</a>
+          </li>
+          <li class="service-row">
+            <span class="service-name">Ponytail</span>
+            <a id="service-ask-ponytail" class="service-ask-btn" href="#">Ask for price</a>
+          </li>
+          <li class="service-row">
+            <span class="service-name">Packing gel</span>
+            <a id="service-ask-packing" class="service-ask-btn" href="#">Ask for price</a>
+          </li>
+          <li class="service-row">
+            <span class="service-name">Revamp and styling</span>
+            <a id="service-ask-revamp" class="service-ask-btn" href="#">Ask for price</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. HOW BOOKING WORKS -->
+      <section class="section-booking-steps" aria-labelledby="steps-heading">
+        <h2 id="steps-heading" class="section-title">How booking works</h2>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-number">1</span>
+            <span class="step-title">Choose your style</span>
+          </li>
+          <li class="step-item">
+            <span class="step-number">2</span>
+            <span class="step-title">Message us on WhatsApp</span>
+          </li>
+          <li class="step-item">
+            <span class="step-number">3</span>
+            <span class="step-title">Get your time confirmed</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 5. VISIT -->
+      <section class="section-visit" aria-labelledby="visit-heading">
+        <h2 id="visit-heading" class="section-title">Visit</h2>
+        <div class="visit-card">
+          <address class="salon-address">
+            16 Bangui Street, Adetokunbo Ademola Crescent, Wuse 2, Abuja
+          </address>
+          <div class="visit-actions">
+            <a class="btn-directions" href="https://www.google.com/maps/search/?api=1&query=16+Bangui+Street%2C+Adetokunbo+Ademola+Crescent%2C+Wuse+2%2C+Abuja" target="_blank" rel="noopener noreferrer">Get directions</a>
+          </div>
+          <div class="instagram-row">
+            <a class="instagram-link" href="https://instagram.com/lamisking.pixiesalon.abuja" target="_blank" rel="noopener noreferrer">@lamisking.pixiesalon.abuja</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. FOOTER -->
+      <footer class="site-footer">
+        <p>Concept preview by Xestlab. Photos shown are placeholders. Prices and hours to be supplied by the salon.</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- 7. STICKY BOTTOM BAR ON MOBILE -->
+  <aside class="mobile-bottom-bar" aria-label="Quick booking">
+    <a id="mobile-whatsapp-btn" class="btn-mobile-book" href="#">Book on WhatsApp</a>
+  </aside>
+
+  <script>
+    const CFG = {
+      phone: "2349018287564",
+      images: {
+        classic: "",
+        frontal: "",
+        cut: "",
+        therapy: ""
+      }
+    };
+
+    (function() {
+      function makeWaUrl(message) {
+        return "https://wa.me/" + CFG.phone + "?text=" + encodeURIComponent(message);
+      }
+
+      var defaultBookUrl = makeWaUrl("Hi Lamisking, I'd like to book an appointment. What times are available?");
+
+      // General book buttons
+      var navBook = document.getElementById("nav-book-link");
+      if (navBook) navBook.href = defaultBookUrl;
+
+      var heroBook = document.getElementById("hero-whatsapp-btn");
+      if (heroBook) heroBook.href = defaultBookUrl;
+
+      var mobileBook = document.getElementById("mobile-whatsapp-btn");
+      if (mobileBook) mobileBook.href = defaultBookUrl;
+
+      // 4 Signature style tiles
+      var tileMap = [
+        { id: "tile-classic", key: "classic", styleName: "classic pixie" },
+        { id: "tile-frontal", key: "frontal", styleName: "frontal pixie" },
+        { id: "tile-cut", key: "cut", styleName: "pixie haircut" },
+        { id: "tile-therapy", key: "therapy", styleName: "hair therapy" }
+      ];
+
+      tileMap.forEach(function(item) {
+        var el = document.getElementById(item.id);
+        if (!el) return;
+
+        el.href = makeWaUrl("Hi Lamisking, I'd like to book a " + item.styleName + ". What times are available?");
+
+        var imgUrl = CFG.images && CFG.images[item.key];
+        if (imgUrl && imgUrl.trim() !== "") {
+          el.style.backgroundImage = "linear-gradient(to top, rgba(18, 10, 14, 0.92) 0%, rgba(18, 10, 14, 0.4) 60%, transparent 100%), url('" + imgUrl.trim() + "')";
+        }
+      });
+
+      // Other services: Ask for price
+      var serviceMap = [
+        { id: "service-ask-frontal", serviceName: "frontal install and customising" },
+        { id: "service-ask-ponytail", serviceName: "ponytail" },
+        { id: "service-ask-packing", serviceName: "packing gel" },
+        { id: "service-ask-revamp", serviceName: "revamp and styling" }
+      ];
+
+      serviceMap.forEach(function(item) {
+        var btn = document.getElementById(item.id);
+        if (!btn) return;
+        btn.href = makeWaUrl("Hi Lamisking, what is the price for " + item.serviceName + "?");
+      });
+    })();
+  </script>
+</body>
+</html>

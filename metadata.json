@@ -1,0 +1,6 @@
+{
+  "name": "Lamisking Pixie Salon and Spa",
+  "description": "Concept preview website for Lamisking Pixie Salon and Spa, professional pixie hairstylist in Abuja.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
